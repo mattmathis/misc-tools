@@ -1,7 +1,7 @@
 # .bashrc for Matt Mathis
 
 # leave some crumbs
-export RC_HIST="$RC_HIST:~/.bashrc_20151118"
+export RC_HIST="$RC_HIST:~/.bashrc_20171110"
 
 # Save $PATH for later
 if [ ! "$LOGINPATH" ]; then
@@ -20,7 +20,9 @@ fi
 export PS1='${debian_chroot:+($debian_chroot)}\u@\h'"$_wp"':\w\n\$ '
 unset _wp
 
-# ... and ignore same sucessive entries and lines that start with space
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+# ... and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
 
 # check the window size after each command and, if necessary,
