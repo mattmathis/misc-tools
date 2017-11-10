@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# do a tail like thing, but preserve the first row
+
+head -1 ${BASH_ARGV}  # not suposed to work
+
+tail $*

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+# send a URL to chrome
+
+google-chrome $*
