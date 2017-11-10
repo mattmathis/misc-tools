@@ -66,9 +66,11 @@ export P4CONFIG=.p4config
 export P4EDITOR=emacs.wait
 export G4NOTHAVEFILTER='.csv .ssv .png .FAIL .DREMEL'
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/google/home/mattmathis/google-cloud-sdk/path.bash.inc'
+if [ -d '/usr/local/google/home/mattmathis/google-cloud-sdk/' ]; then
+  # The next line updates PATH for the Google Cloud SDK.
+  source '/usr/local/google/home/mattmathis/google-cloud-sdk/path.bash.inc'
 
-# The next line enables shell command completion for gcloud.
-source '/usr/local/google/home/mattmathis/google-cloud-sdk/completion.bash.inc'
+  # The next line enables shell command completion for gcloud.
+  source '/usr/local/google/home/mattmathis/google-cloud-sdk/completion.bash.inc'
 
+fi
