@@ -1,0 +1,30 @@
+#! /bin/bash
+
+# connect (ssh) to a specific node
+
+DB=~/lib/hostDB
+keyDB=~/lib/mlab-node-fingerprints.txt
+
+patt=$1
+if [ "x$2" != x ]; then
+   patt=$1.$2
+fi
+
+host=`grep -i "$patt" $DB`
+if [ `echo $host | wc -w` -gt 1 ]; then
+   echo "Multiple matches (none tried):"
+   echo "$host"
+   exit 2
+fi
+
+if [ -z "$host" ]; then
+   host=$patt.measurement-lab.org
+   echo "Pattern not found. Attempting host: $host"
+fi
+echo -n "Possible host key:"
+grep -i "$host" $keyDB
+echo
+
+set -x
+ssh -4 iupui_npad@$host
+# ssh -4 -iid_rsa_mlab iupui_npad@$host

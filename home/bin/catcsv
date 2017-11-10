@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Do a concatinate (cat) like thing, but don't repeat the column names
+
+# CAUTION does not check to see if the columns are the same
+
+head -1 $1
+
+for f in $*; do
+    tail -n +2 $f
+done

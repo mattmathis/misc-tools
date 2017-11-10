@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd ~/OPENSOURCE/RFC
+
+file=$1
+if [ ! -f $file ]; then
+   file=$1.txt
+fi
+if [ ! -f $file ]; then
+   file=rfc$1.txt
+fi
+if [ ! -f $file ]; then
+   echo "$1 not found"
+   exit 2
+fi
+
+exec less $file

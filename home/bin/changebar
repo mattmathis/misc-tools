@@ -1,0 +1,47 @@
+#! /bin/sh
+# usage: changebar new old
+# 
+#		yields new.bar
+# TMPDIR must be writable
+TMPDIR=.
+
+if [ $# != 2 ]; then
+	echo Usage: changebar new old
+	echo yields new.bar
+	exit
+fi
+if [ ! -f $1 ]; then
+    echo "No new file: $1"
+    exit 2
+fi
+if [ ! -f $2 ]; then
+    echo "No old file: $2"
+    exit 2
+fi
+
+new=$1
+old=$2
+oldtmp="$TMPDIR/#`basename $old`.t"
+newtmp="$TMPDIR/#`basename $new`.t"
+newbar=$new.bar
+
+# echo $new $new.bar $old $oldtmp
+sed -e 's/^/ &/' $new > $newbar
+
+awk '{if (NF) {print "line"NR, $0}}' $new | \
+    tr -s '[:blank:]' '[\n*]' > $newtmp
+tr -s '[:blank:]' '[\n*]' < $old > $oldtmp
+
+diff -w $newtmp $oldtmp | awk '
+/^< line/ { line=substr($0, 7); next}
+/^</ {
+    if (line) printf "%ds/^ /#/\n", line;
+    line = ""
+}
+END { print "w"; }
+'  | ex $newbar > /dev/null
+
+echo "Created $newbar"
+
+rm -f $newtmp $oldtmp
+

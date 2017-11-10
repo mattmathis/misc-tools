@@ -1,0 +1,7 @@
+#! /bin/sh
+# clipart area match
+pattern=$1
+shift
+
+cd $HOME/lib/clipart
+cat [0-9]*${pattern}* | fgrep -i "$*"

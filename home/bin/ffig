@@ -1,0 +1,24 @@
+#! /bin/bash
+
+# grep Linux kernel network files for useful tidbits
+
+# select choice kernels and manifest files
+manifest="Documentation include init kernel lib fs/proc net .config"
+
+kernloc="$REMOTEKERN . .. ../.. ../../.. ../../../.. ../../../../.. /usr/src/linux NOWHERE"
+for kern in $kernloc; do
+	fgrep vmlinux: $kern/Makefile > /dev/null 2>&1
+	if [ $? == 0 ]; then
+		break
+	fi
+
+done
+if [ $kern == NOWHERE ]; then
+	echo Can not find a kernel
+	exit 2
+fi
+cd $kern
+
+echo Kernel: `pwd`
+find $manifest -type f | xargs grep -I "$@"
+

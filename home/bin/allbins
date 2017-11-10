@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# Script to discover all binarys in your path
+
+for d in `echo $PATH | tr ':' ' '`; do
+	if [ ! -d $d ]; then
+		continue
+	fi
+	find $d -maxdepth 1 -print | grep ${*-"."}
+done

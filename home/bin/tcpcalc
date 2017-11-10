@@ -1,0 +1,63 @@
+#! /bin/sh
+
+# Matt Mathis, Copyright 2001, all rights reserved
+
+prog='
+/^q/{ exit; }
+{       if ((NF != 3) && (NF !=4)) {
+                print "Enter mtu, rtt (ms), BW (Mb/s), [Queue size (KB)]"
+                next
+        }
+        MSS = $1 - 52;
+        RTT = $2/1000.0
+        Rb = $3/8
+	if (NF == 4) {
+	    Q = $4;
+	} else {
+	    Q = 1000.0*RTT*Rb;
+	}
+
+        print "\tEstimate"
+        print "\t\tMSS =", MSS, "Bytes"
+        print "\t\tRTT =", RTT, "S"
+        print "\t\tRb =", Rb, "MB/s"
+	print "\t\tQueue =", Q, "kB"
+
+        Wb = 1000.0*RTT*Rb + Q
+        Wp = 1000.0*Wb/MSS
+        Ws=0
+        for (Wm=64*1.024; Wm < Wb; Wm *= 2) {Ws++}
+	SS=0; SSp=0
+	for (Wi=3.00; Wi < Wp; Wi *=1.5) {SS++; SSp+=Wi}
+	SSp = int(SSp)
+        Rp = 1000000.0*Rb/MSS
+        Lp = 3.0/8.0 * Wp * Wp
+        Lb = Lp * MSS /1000000.0
+        Lt = Lp / Rp
+        p = 1.0 / Lp
+
+        print "\tCalculate"
+        print "\t\t Wb =", Wb, "Peak window size in kBytes"
+        print "\t\t Wp =", Wp, "Peak window size in packets"
+        print "\t\t Ws =", Ws, "Required window scale shifts"
+        print "\t\t Rp =", Rp, "Rate in pps"
+        print "\t\t SSr =", SS, "RTT of Slow-Start (w/ DA)"
+        print "\t\t SSt =", SS*RTT, "seconds of Slow-Start (w/ DA)"
+        print "\t\t SSp =", SSp, "Packets sent in Slow-Start (w/ DA)"
+        print "\t\t SSd =", SSp*MSS, "Bytes sent in Slow-Start (w/ DA)"
+        print "\t\t Lb =", Lb, "MBytes between losses"
+        print "\t\t Lt =", Lt, "Seconds between losses"
+        print "\t\t Lp =", Lp, "Packets between losses"
+        print "\t\t p =", p, "Loss probability"
+
+}
+'
+
+if [ "x$1" != x ]; then
+	echo $* | awk "$prog"
+else
+	awk "$prog"
+fi
+
+
+
