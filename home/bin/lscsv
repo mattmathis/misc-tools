@@ -1,13 +1,22 @@
 #! /bin/bash
 
+rows=1
+if [ "x$2" != "x" ]; then
+  rows=$1
+  shift
+fi
 awk -F, '
-{
-    if (NR == 1) {
-       for (i=1; i<=NF; i++) name[i] = $i
-    }
-    if (NR == 2) {
-	for (i=1; i<=NF; i++) print i, name[i], $i;
-	exit
+{   
+    if (NR < '"$rows"'+2) {
+       for (i=1; i<=NF; i++) name[i][NR] = $i
+    } else {
+       for (i=1; i<=NF; i++) {
+           printf "%3d ", i ;
+           for (row=1; row<'"$rows"'+2; row++ )
+	       printf "%20s ", name[i][row] ;
+           printf "\n"
+       }
+       exit
     }	
 }
 ' $1

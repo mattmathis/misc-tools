@@ -1,7 +1,7 @@
 # .bashrc for Matt Mathis
 
 # leave some crumbs
-export RC_HIST="$RC_HIST:~/.bashrc_20171110"
+export RC_HIST="$RC_HIST:~/.bashrc_20190528"
 
 # Save $PATH for later
 if [ ! "$LOGINPATH" ]; then
@@ -36,13 +36,12 @@ shopt -s checkwinsize
 set -P
 function cd {
     if [ "$1" ]; then
-	builtin cd "$*"
+        builtin cd "$*"
     else
-	builtin cd $HOME/tmp
+        builtin cd $HOME/tmp
     fi
 }
-export CDPATH=.:~:~/.shortcuts
-# export CDPATH=.:~:~/.shortcuts:~/Projects
+export CDPATH=.:~:~/.shortcuts:~/Projects
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -57,7 +56,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export PATH=$LOGINPATH:$HOME/bin:
+export PATH=/usr/local/google/home/mattmathis/anaconda2/:$LOGINPATH:$HOME/bin:
 
 # de, emacs.wait are wrappers for emacs/emacsserver
 export EDITOR=emacs.wait
@@ -74,3 +73,4 @@ if [ -d '/usr/local/google/home/mattmathis/google-cloud-sdk/' ]; then
   source '/usr/local/google/home/mattmathis/google-cloud-sdk/completion.bash.inc'
 
 fi
+
