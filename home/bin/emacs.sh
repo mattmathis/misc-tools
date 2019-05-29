@@ -27,17 +27,15 @@ if [ `uname` == "Darwin" ]; then
     # workarounds
     # mode=nowin
 else
-    # choose an emacs binary
-    emacs=/usr/bin/emacs24
+  # choose an emacs binary
+    emacs=/usr/bin/google-emacs
+    [ ! -x $emacs ] && emacs=/usr/bin/emacs24
     [ ! -x $emacs ] && emacs=/usr/bin/emacs
     [ ! -x $emacs ] && echo Can not find emacs binary && exit 2
+
     # choose emaceclient binary
-    case $emacs in
-      /usr/bin/emacs24) cemacs=emacsclient.emacs24
-        ;;
-      *) cemacs=emaceclient
-        ;;
-    esac
+    cemacs=`echo $emacs | sed 's/emacs/emacsclient/'`
+    [ ! -x $cemacs ] && cemacs=/usr/bin/emacsclient 
 
     # If adjust the mode per X display
     case "x$DISPLAY" in
