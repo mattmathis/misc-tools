@@ -1,7 +1,7 @@
 # .bashrc for Matt Mathis
 
 # leave some crumbs
-export RC_HIST="$RC_HIST:~/.bashrc_20190528"
+export RC_HIST="$RC_HIST:~/.bashrc_20190918"
 
 # Save $PATH for later
 if [ ! "$LOGINPATH" ]; then
@@ -38,7 +38,7 @@ function cd {
     if [ "$1" ]; then
         builtin cd "$*"
     else
-        builtin cd $HOME/tmp
+        builtin cd $HOME/work
     fi
 }
 export CDPATH=.:~:~/.shortcuts:~/Projects
@@ -56,7 +56,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export PATH=/usr/local/google/home/mattmathis/anaconda2/:$LOGINPATH:$HOME/bin:
+export PATH=/usr/local/google/home/mattmathis/anaconda2/bin:$LOGINPATH:$HOME/bin:
 
 # de, emacs.wait are wrappers for emacs/emacsserver
 export EDITOR=emacs.wait
