@@ -1,7 +1,8 @@
 # .bashrc for Matt Mathis
+# This lives in .../misc-tools/home/
 
 # leave some crumbs
-export RC_HIST="$RC_HIST:~/.bashrc_20190918"
+export RC_HIST="$RC_HIST:~/.bashrc_20191015"
 
 # Save $PATH for later
 if [ ! "$LOGINPATH" ]; then
@@ -21,7 +22,6 @@ export PS1='${debian_chroot:+($debian_chroot)}\u@\h'"$_wp"':\w\n\$ '
 unset _wp
 
 # don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups
 # ... and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
 
@@ -30,7 +30,7 @@ export HISTCONTROL=ignoreboth
 shopt -s checkwinsize
 
 # Make cd a bit nicer.
-# Redefine pwd to display absolute paths, default to ~/tmp and search
+# Redefine pwd to display absolute paths, default to ~/work and search
 # some shortcuts.
 # BEWARE: this may prove to be problematic on (flaky) remote file systems.
 set -P
@@ -56,11 +56,10 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export PATH=/usr/local/google/home/mattmathis/anaconda2/bin:$LOGINPATH:$HOME/bin:
+export PATH=$LOGINPATH:$HOME/bin:
 
 # de, emacs.wait are wrappers for emacs/emacsserver
 export EDITOR=emacs.wait
-
 export P4CONFIG=.p4config
 export P4EDITOR=emacs.wait
 export G4NOTHAVEFILTER='.csv .ssv .png .FAIL .DREMEL'
