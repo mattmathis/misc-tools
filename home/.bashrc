@@ -56,7 +56,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export PATH=$LOGINPATH:$HOME/bin:
+export PATH=$HOME/go/bin:$LOGINPATH:$HOME/bin:
 
 # de, emacs.wait are wrappers for emacs/emacsserver
 export EDITOR=emacs.wait
