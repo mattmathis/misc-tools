@@ -1,0 +1,80 @@
+#!/bin/bash
+
+# Fetch pcap files from the new platform 
+
+# usage: fetchpcap <IPadderss> [<startdate> [<enddate>]]
+TARCACHE=~/.tar_cache
+mkdir -p ${TARCACHE}
+
+IPaddress=$1
+Start=${2-"2019-01-01"}
+End=`date -u "+%Y-%m-%d"`
+End=${3-${End}}
+
+if [ -f query.txt ] ; then
+   echo "rm query.txt to force a fresh query"
+else
+bq query --project_id=mlab-sandbox --use_legacy_sql=false --format=sparse << zzEOFzz > query.txt
+WITH 
+
+# ndt5 uses the legacy parser
+ndt5 AS (
+    SELECT 
+        test_id AS id,
+        partition_date AS date,
+        "ndt5" AS ver,
+        result.ServerIP
+    FROM \`measurement-lab.ndt_raw.ndt5_legacy\`
+    where
+	partition_date BETWEEN "${Start}" AND "${End}"
+        AND result.ClientIP = "${IPaddress}"
+),
+
+# ndt7 uses standard columns
+ndt7 AS (
+    SELECT
+        id,
+        date,
+        "ndt7" AS ver,
+        raw.ServerIP,
+    FROM \`measurement-lab.ndt_raw.ndt7\`
+    where
+    	date BETWEEN "${Start}" AND "${End}"
+        AND raw.ClientIP = "${IPaddress}"
+)
+
+SELECT
+    id, ndt.date, ver, ServerIP, pcap.parser.ArchiveURL, pcap.parser.Filename
+FROM
+    ( SELECT * FROM ndt7 UNION ALL 
+      SELECT * FROM ndt5 ) AS ndt
+    LEFT JOIN \`measurement-lab.ndt_raw.pcap\` AS pcap USING ( id )
+zzEOFzz
+fi
+
+tests=`cat  query.txt | wc -l`
+pcaps=`fgrep archive-measurement-lab  query.txt | wc -l`
+echo "Found ${pcaps} pcap files for ${tests} tests."
+
+cat query.txt | while read id date ver serverIP ArchiveURL Filename ; do
+	case ${ArchiveURL} in
+	     ----*) continue ;;
+	     ArchiveURL) continue ;;
+	     NULL) continue ;;
+	     *) echo "==== Fetching trace fir UUID xs${id}"
+	     	tbn=`basename ${ArchiveURL}`
+		tarloc="${TARCACHE}/${tbn}"
+	     	if [ -s "${tarloc}" ]; then
+		   echo "      Using cached ${tarloc}"
+		else
+		   echo "     Fetching ${ArchiveURL}"
+		   gsutil cp "${ArchiveURL}" "${tarloc}"
+		fi
+		mkdir -p $id
+		(   cd $id;
+		    tar xzf "${tarloc}" --wildcards --warning=no-unknown-keyword "*${id}*" -O > "${id}.pcap.gz"
+		    tcptrace -G -zxy -l "${id}.pcap.gz" > output.txt
+		)
+	esac
+done
+

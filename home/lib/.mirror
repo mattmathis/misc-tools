@@ -1,0 +1,7 @@
+#! /bin/bash
+
+locate '*/.mirror' | while read path ; do
+       dest=`echo $path | sed -e "s;$HOME/;;" -e "s;/;_;g"`
+       echo cp $path $dest
+       cp $path $dest
+done

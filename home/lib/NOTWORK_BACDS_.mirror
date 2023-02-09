@@ -1,0 +1,2 @@
+wget --mirror --page-requisites --directory-prefix=`pwd` --convert-links \
+     --no-check-certificate https://www.bacds.org/

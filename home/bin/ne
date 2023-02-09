@@ -2,4 +2,4 @@
 
 # send a URL to chrome
 
-google-chrome $*
+google-chrome "$@"

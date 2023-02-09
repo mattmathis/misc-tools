@@ -1,4 +1,6 @@
-#! /bin/bash
+#!/bin/bash
+
+set -x
 
 # generalized "print anything" cover
 name=`basename $0`

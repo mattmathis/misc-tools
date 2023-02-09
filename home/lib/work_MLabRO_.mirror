@@ -1,0 +1,44 @@
+#! /bin/bash
+
+# Updated (by hand) to parallel https://github.com/m-lab/dev-tracker 
+list="
+etl-gardener
+etl
+etl-schema
+"
+
+if [ "x$1" = "xall" ] ; then
+  list="$list "`awk -e '/EOF/{ ok = 0 };{if (ok) {print $2}};/<<-EOF/{ ok= 1}' dev-tracker/gen_readme.sh`
+fi
+
+prefix="git@github.com:m-lab"
+LOGFMT='%(HEAD) %(refname:short) - %(objectname:short) - %(contents:subject) - %(authorname) (%(committerdate:relative))'
+for d in $list; do
+  if [ "$d" = '0' ]; then
+    continue
+  fi
+  echo -n "    ===== $d"
+  if [ -d "$d" ]; then
+    echo " (pull)"
+    chmod -R u+w "$d"
+    (cd $d
+     # git fetch
+     # git checkout main
+     # git branch -D master
+     git pull --quiet
+     git for-each-ref --sort=-committerdate refs/remotes/ --format="$LOGFMT" | sed -n '0,/HEAD/p' 
+    )
+  else
+    echo " (clone)"
+    git clone --quiet "${prefix}/$d"
+    if [ $? != 0 ]; then
+      echo "Failed: git clone --quiet ${prefix}/$d"
+    else
+      (cd "$d"
+       git pull --quiet
+       git for-each-ref --sort=-committerdate refs/remotes/ --format="$LOGFMT" | sed -n '0,/HEAD/p' 
+      )
+    fi
+  fi
+  chmod -R a-w "$d"
+done

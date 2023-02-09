@@ -48,6 +48,7 @@ export CDPATH=.:~:~/.shortcuts:~/Projects
 
 # other aliases
 alias more=less
+alias s='echo "$*" | aspell -a'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

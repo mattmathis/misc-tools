@@ -1,0 +1,22 @@
+#! /bin/bash
+
+set -x
+
+file=../IDarchive/ID-`date +%Y%m%d`.tgz
+EXCLUDE=.mirror
+FROM=rsync.ietf.org::internet-drafts
+
+if [ -f $file ]; then
+        echo File $file exists - suppressing archive
+        file=""
+fi
+
+chmod -R a+w .
+rsync --archive --verbose --compress --delete --exclude=$EXCLUDE $FROM .
+chmod -R a-w .
+
+if [ "$file" ]; then
+    echo "Taring in the background"
+    tar czf $file . &
+    echo Pid: $!
+fi

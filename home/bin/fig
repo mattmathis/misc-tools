@@ -1,3 +1,3 @@
 #! /bin/bash
 
-find . -type f -print0 | xargs -0 grep "$@"
+find . -type f -print0 | xargs -0 grep "$@" | colrm 200

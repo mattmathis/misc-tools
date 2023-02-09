@@ -1,0 +1,1 @@
+git for-each-ref --sort='-committerdate' --format='%(refname)%09%(committerdate)' refs/heads refs/remotes | less
