@@ -1,0 +1,12 @@
+Model: WD_BLACK SN770 500GB (nvme)
+Disk /dev/nvme0n1: 476940MiB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start      End        Size       File system     Name      Flags
+ 1      2.00MiB    1024MiB    1022MiB    fat32                     boot, esp
+ 2      1024MiB    5120MiB    4096MiB    fat32           recovery  msftdata
+ 3      5120MiB    472842MiB  467722MiB
+ 4      472842MiB  476938MiB  4096MiB    linux-swap(v1)            swap
+
