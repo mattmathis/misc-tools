@@ -13,7 +13,7 @@ if [ ! "$RC_HIST" ]; then
     fi
 fi
 # leave some crumbs
-export RC_HIST="$RC_HIST:~/.bash_profile_20230423"
+export RC_HIST="$RC_HIST:.bash_profile_20230423"
 
 # the default umask is set in /etc/login.defs
 #umask 022
