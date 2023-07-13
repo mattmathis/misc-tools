@@ -1,2 +1,3 @@
+# sudo pvs
   PV                    VG   Fmt  Attr PSize   PFree
   /dev/mapper/cryptdata data lvm2 a--  456.74g    0 

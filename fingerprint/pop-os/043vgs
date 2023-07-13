@@ -1,2 +1,3 @@
+# sudo vgs
   VG   #PV #LV #SN Attr   VSize   VFree
   data   1   1   0 wz--n- 456.74g    0 

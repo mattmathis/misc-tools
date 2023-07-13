@@ -1,3 +1,4 @@
+# sudo lshw
 pop-os
     description: Mini PC
     product: Meerkat (BNUC11TNHi30000/1/2/5/6)
@@ -88,7 +89,7 @@ pop-os
           version: 6.140.1
           serial: To Be Filled By O.E.M.
           slot: U3E1
-          size: 2820MHz
+          size: 3895MHz
           capacity: 4100MHz
           width: 64 bits
           clock: 100MHz
@@ -254,7 +255,7 @@ pop-os
              clock: 33MHz
              capabilities: pm msi xhci bus_master cap_list
              configuration: driver=xhci_hcd latency=0
-             resources: iomemory:600-5ff irq:128 memory:603d190000-603d19ffff
+             resources: iomemory:600-5ff irq:144 memory:603d190000-603d19ffff
            *-usbhost:0
                 product: xHCI Host Controller
                 vendor: Linux 6.2.6-76060206-generic xhci-hcd
@@ -268,8 +269,8 @@ pop-os
                 product: xHCI Host Controller
                 vendor: Linux 6.2.6-76060206-generic xhci-hcd
                 physical id: 1
-                bus info: usb@2
-                logical name: usb2
+                bus info: usb@3
+                logical name: usb3
                 version: 6.02
                 capabilities: usb-3.10
                 configuration: driver=hub slots=4 speed=10000Mbit/s
@@ -308,13 +309,13 @@ pop-os
              clock: 33MHz
              capabilities: pm msi xhci bus_master cap_list
              configuration: driver=xhci_hcd latency=0
-             resources: iomemory:600-5ff irq:130 memory:603d180000-603d18ffff
+             resources: iomemory:600-5ff irq:145 memory:603d180000-603d18ffff
            *-usbhost:0
                 product: xHCI Host Controller
                 vendor: Linux 6.2.6-76060206-generic xhci-hcd
                 physical id: 0
-                bus info: usb@3
-                logical name: usb3
+                bus info: usb@2
+                logical name: usb2
                 version: 6.02
                 capabilities: usb-2.00
                 configuration: driver=hub slots=12 speed=480Mbit/s
@@ -323,13 +324,13 @@ pop-os
                    product: Synaptics Hi-Res Audio
                    vendor: Synaptics
                    physical id: 1
-                   bus info: usb@3:1
+                   bus info: usb@2:1
                    logical name: card1
                    logical name: /dev/snd/controlC1
                    logical name: /dev/snd/pcmC1D0c
                    logical name: /dev/snd/pcmC1D0p
-                   logical name: input4
-                   logical name: /dev/input/event4
+                   logical name: input3
+                   logical name: /dev/input/event3
                    version: 0.10
                    serial: 000000000000000000000000
                    capabilities: usb-2.00 audio-control usb
@@ -339,7 +340,7 @@ pop-os
                    product: Logitech USB Optical Mouse
                    vendor: Logitech
                    physical id: 2
-                   bus info: usb@3:2
+                   bus info: usb@2:2
                    logical name: input5
                    logical name: /dev/input/event5
                    logical name: /dev/input/mouse0
@@ -351,7 +352,7 @@ pop-os
                    product: 4-Port USB 2.0 Hub
                    vendor: Generic
                    physical id: 3
-                   bus info: usb@3:3
+                   bus info: usb@2:3
                    version: 1.43
                    capabilities: usb-2.10
                    configuration: driver=hub slots=4 speed=480Mbit/s
@@ -360,15 +361,15 @@ pop-os
                       product: SEM USB Keyboard System Control
                       vendor: SEM
                       physical id: 1
-                      bus info: usb@3:3.1
-                      logical name: input26
+                      bus info: usb@2:3.1
+                      logical name: input6
                       logical name: /dev/input/event6
-                      logical name: input26::capslock
-                      logical name: input26::numlock
-                      logical name: input26::scrolllock
-                      logical name: input27
+                      logical name: input6::capslock
+                      logical name: input6::numlock
+                      logical name: input6::scrolllock
+                      logical name: input7
                       logical name: /dev/input/event7
-                      logical name: input28
+                      logical name: input8
                       logical name: /dev/input/event8
                       version: 1.10
                       capabilities: usb-1.10 usb
@@ -378,12 +379,12 @@ pop-os
                       product: HD Pro Webcam C920
                       vendor: Logitech, Inc.
                       physical id: 2
-                      bus info: usb@3:3.2
+                      bus info: usb@2:3.2
                       logical name: card2
                       logical name: /dev/snd/controlC2
                       logical name: /dev/snd/pcmC2D0c
-                      logical name: input29
-                      logical name: /dev/input/event13
+                      logical name: input9
+                      logical name: /dev/input/event9
                       version: 0.11
                       serial: 551F923F
                       capabilities: usb-2.00 usb
@@ -393,7 +394,7 @@ pop-os
                       product: Yubico Gnubby (gnubby1)
                       vendor: Yubico
                       physical id: 4
-                      bus info: usb@3:3.4
+                      bus info: usb@2:3.4
                       version: 0.97
                       capabilities: usb-2.00
                       configuration: driver=usbhid maxpower=30mA speed=12Mbit/s
@@ -402,7 +403,7 @@ pop-os
                    product: tk-x001
                    vendor: Google Inc.
                    physical id: 6
-                   bus info: usb@3:6
+                   bus info: usb@2:6
                    version: 1.00
                    capabilities: usb-2.00
                    configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
@@ -411,7 +412,7 @@ pop-os
                    product: AX201 Bluetooth
                    vendor: Intel Corp.
                    physical id: a
-                   bus info: usb@3:a
+                   bus info: usb@2:a
                    version: 0.02
                    capabilities: bluetooth usb-2.01
                    configuration: driver=btusb maxpower=100mA speed=12Mbit/s
@@ -433,52 +434,6 @@ pop-os
                    version: 1.43
                    capabilities: usb-3.10
                    configuration: driver=hub slots=4 speed=5000Mbit/s
-                 *-usb
-                      description: Mass storage device
-                      product: Portable
-                      vendor: Seagate
-                      physical id: 3
-                      bus info: usb@4:3.3
-                      logical name: scsi1
-                      version: 0.00
-                      serial: NACMNSDN
-                      capabilities: usb-3.00 scsi
-                      configuration: driver=uas maxpower=144mA speed=5000Mbit/s
-                    *-disk
-                         description: SCSI Disk
-                         product: Portable
-                         vendor: Seagate
-                         physical id: 0.0.0
-                         bus info: scsi@1:0.0.0
-                         logical name: /dev/sda
-                         version: 9300
-                         serial: NACMNSDN
-                         size: 3726GiB (4TB)
-                         capabilities: gpt-1.00 partitioned partitioned:gpt
-                         configuration: ansiversion=6 guid=56b37710-dc11-4705-8c07-53899e3a189a logicalsectorsize=512 sectorsize=4096
-                       *-volume:0
-                            description: reserved partition
-                            vendor: Windows
-                            physical id: 1
-                            bus info: scsi@1:0.0.0,1
-                            logical name: /dev/sda1
-                            serial: ec48768b-456c-4a7a-ba0e-f9aded88070e
-                            capacity: 127MiB
-                            capabilities: nofs
-                            configuration: name=Microsoft reserved partition
-                       *-volume:1
-                            description: Windows NTFS volume
-                            vendor: Windows
-                            physical id: 2
-                            bus info: scsi@1:0.0.0,2
-                            logical name: /dev/sda2
-                            logical name: /media/mattmathis/Seagate Portable Drive
-                            version: 3.1
-                            serial: e07a-58d7
-                            size: 1677GiB
-                            capacity: 3725GiB
-                            capabilities: ntfs initialized
-                            configuration: clustersize=4096 created=2022-09-16 00:17:53 filesystem=ntfs label=Seagate Portable Drive mount.fstype=ntfs3 mount.options=rw,nosuid,nodev,relatime,uid=1000,gid=1000,iocharset=utf8,windows_names name=Basic data partition state=mounted
         *-memory UNCLAIMED
              description: RAM memory
              product: Tiger Lake-LP Shared SRAM
@@ -564,7 +519,7 @@ pop-os
              clock: 66MHz
              capabilities: sata msi pm ahci_1.0 bus_master cap_list
              configuration: driver=ahci latency=0
-             resources: irq:129 memory:6a500000-6a501fff memory:6a503000-6a5030ff ioport:3090(size=8) ioport:3080(size=4) ioport:3060(size=32) memory:6a502000-6a5027ff
+             resources: irq:146 memory:6a500000-6a501fff memory:6a503000-6a5030ff ioport:3090(size=8) ioport:3080(size=4) ioport:3060(size=32) memory:6a502000-6a5027ff
         *-serial:3
              description: Serial bus controller
              product: Tiger Lake-LP Serial IO I2C Controller #4
@@ -615,7 +570,7 @@ pop-os
                 width: 32 bits
                 clock: 33MHz
                 capabilities: pm msi msix pciexpress bus_master cap_list ethernet physical 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=igc driverversion=6.2.6-76060206-generic duplex=full firmware=1057:8754 ip=192.168.7.246 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                configuration: autonegotiation=on broadcast=yes driver=igc driverversion=6.2.6-76060206-generic duplex=full firmware=1057:8754 ip=192.168.7.247 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:17 memory:6a200000-6a2fffff memory:6a300000-6a303fff
         *-isa
              description: ISA bridge
@@ -688,25 +643,25 @@ pop-os
              configuration: driver=snd_hda_intel latency=32
              resources: iomemory:600-5ff iomemory:600-5ff irq:181 memory:603d1a0000-603d1a3fff memory:603d000000-603d0fffff
            *-input:0
-                product: HDA Intel PCH HDMI/DP,pcm=7
+                product: HDA Intel PCH HDMI/DP,pcm=3
                 physical id: 0
                 logical name: input10
                 logical name: /dev/input/event10
            *-input:1
-                product: HDA Intel PCH HDMI/DP,pcm=8
+                product: HDA Intel PCH HDMI/DP,pcm=7
                 physical id: 1
                 logical name: input11
                 logical name: /dev/input/event11
            *-input:2
-                product: HDA Intel PCH HDMI/DP,pcm=9
+                product: HDA Intel PCH HDMI/DP,pcm=8
                 physical id: 2
                 logical name: input12
                 logical name: /dev/input/event12
            *-input:3
-                product: HDA Intel PCH HDMI/DP,pcm=3
+                product: HDA Intel PCH HDMI/DP,pcm=9
                 physical id: 3
-                logical name: input9
-                logical name: /dev/input/event9
+                logical name: input13
+                logical name: /dev/input/event13
         *-serial:5
              description: SMBus
              product: Tiger Lake-LP SMBus Controller
@@ -750,6 +705,6 @@ pop-os
   *-input:3
        product: Video Bus
        physical id: 4
-       logical name: input3
-       logical name: /dev/input/event3
+       logical name: input4
+       logical name: /dev/input/event4
        capabilities: platform

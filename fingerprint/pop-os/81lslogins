@@ -1,5 +1,6 @@
+# lslogins
   UID USER                PROC PWD-LOCK PWD-DENY  LAST-LOGIN GECOS
-    0 root                 168                               root
+    0 root                 164                               root
     1 daemon                 1                               daemon
     2 bin                    0                               bin
     3 sys                    0                               sys
@@ -22,7 +23,7 @@
   103 systemd-timesync       0                               systemd Time Synchronization,,,
   104 syslog                 1                               
   105 _apt                   0                               
-  106 geoclue                0                               
+  106 geoclue                1                               
   107 colord                 1                               colord colour management daemon,,,
   108 gnome-initial-setup    0                               
   109 speech-dispatcher      0                               Speech Dispatcher,,,
@@ -42,5 +43,5 @@
   123 saned                  0                               
   124 _flatpak               0                               Flatpak system-wide installation helper,,,
   125 dnsmasq                0                               dnsmasq,,,
- 1000 mattmathis           142                   Jun22/11:34 Matt Mathis
+ 1000 mattmathis           136                   Jul12/21:42 Matt Mathis
 65534 nobody                 0                               nobody

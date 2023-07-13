@@ -1,3 +1,4 @@
+# sudo sudo cryptsetup luksDump /dev/nvme0n1p3
 LUKS header information
 Version:       	2
 Epoch:         	3

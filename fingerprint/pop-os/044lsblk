@@ -1,2 +1,3 @@
+# sudo lsblk /dev/mapper/data-root -f
 NAME      FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
-data-root ext4   1.0         1ac6d84f-3250-47ac-a71b-32d77a33a18d  368.1G    13% /
+data-root ext4   1.0         1ac6d84f-3250-47ac-a71b-32d77a33a18d  363.3G    14% /

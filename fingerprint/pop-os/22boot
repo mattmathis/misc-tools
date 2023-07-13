@@ -1,20 +1,21 @@
+# sudo ls -Rl /boot
 /boot:
-total 152296
--rw-r--r-- 1 root root    275729 May 30 12:02 config-6.2.6-76060206-generic
+total 152500
+-rw-r--r-- 1 root root    275765 Jul 10 11:52 config-6.2.6-76060206-generic
 drwx------ 5 root root      4096 Dec 31  1969 efi
 lrwxrwxrwx 1 root root        33 Mar 26 22:24 initrd.img -> initrd.img-6.2.6-76060206-generic
--rw-r--r-- 1 root root 133839750 Jun  8 07:06 initrd.img-6.2.6-76060206-generic
+-rw-r--r-- 1 root root 134046167 Jul 12 21:37 initrd.img-6.2.6-76060206-generic
 lrwxrwxrwx 1 root root        33 Mar 26 22:24 initrd.img.old -> initrd.img-6.2.6-76060206-generic
--rw------- 1 root root   7975326 May 30 12:02 System.map-6.2.6-76060206-generic
+-rw------- 1 root root   7975326 Jul 10 11:52 System.map-6.2.6-76060206-generic
 lrwxrwxrwx 1 root root        30 Mar 26 22:24 vmlinuz -> vmlinuz-6.2.6-76060206-generic
--rw------- 1 root root  13844768 May 30 12:02 vmlinuz-6.2.6-76060206-generic
+-rw------- 1 root root  13844192 Jul 10 11:52 vmlinuz-6.2.6-76060206-generic
 lrwxrwxrwx 1 root root        30 Mar 26 22:24 vmlinuz.old -> vmlinuz-6.2.6-76060206-generic
 
 /boot/efi:
 total 12
 drwx------ 2 root root 4096 Apr 10 07:03 3137346862af8a2bd39cc42c64341733
 drwx------ 7 root root 4096 Apr 10 07:03 EFI
-drwx------ 3 root root 4096 Jun 22 11:27 loader
+drwx------ 3 root root 4096 Jul 12 21:41 loader
 
 /boot/efi/3137346862af8a2bd39cc42c64341733:
 total 0
@@ -35,10 +36,10 @@ total 100
 total 0
 
 /boot/efi/EFI/Pop_OS-1ac6d84f-3250-47ac-a71b-32d77a33a18d:
-total 144232
--rwx------ 1 root root       167 Jun  8 07:06 cmdline
--rwx------ 1 root root 133839750 Jun  8 07:06 initrd.img
--rwx------ 1 root root  13844768 Jun  8 07:06 vmlinuz.efi
+total 144432
+-rwx------ 1 root root       167 Jul 12 21:37 cmdline
+-rwx------ 1 root root 134046167 Jul 12 21:37 initrd.img
+-rwx------ 1 root root  13844192 Jul 12 21:37 vmlinuz.efi
 
 /boot/efi/EFI/Recovery-6F2C-4973:
 total 146928
@@ -53,9 +54,9 @@ total 100
 total 12
 drwx------ 2 root root 4096 Apr 10 07:03 entries
 -rwx------ 1 root root   23 Apr 10 07:03 loader.conf
--rwx------ 1 root root  512 Jun 22 11:27 random-seed
+-rwx------ 1 root root  512 Jul 12 21:41 random-seed
 
 /boot/efi/loader/entries:
 total 8
--rwx------ 1 root root 256 Jun  8 07:06 Pop_OS-current.conf
+-rwx------ 1 root root 256 Jul 12 21:37 Pop_OS-current.conf
 -rwx------ 1 root root 299 Apr 10 07:03 Recovery-6F2C-4973.conf

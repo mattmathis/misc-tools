@@ -12,7 +12,8 @@ while read name command ; do
 	continue
     fi
     echo -n "$name"
-    $command > "$name"
+    echo "# $command" > "$name"
+    $command >> "$name"
     echo " done"
 done <<EOF
 # Disks and storage
@@ -38,6 +39,11 @@ done <<EOF
 22boot sudo ls -Rl /boot
 23config egrep . /boot/config*
 24lsmod lsmod
+
+# Userland
+31apt apt list
+25rootpip sudo pip list
+35userpip pip list
 
 # users and accounts
 81lslogins lslogins

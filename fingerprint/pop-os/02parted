@@ -1,3 +1,4 @@
+# sudo parted /dev/nvme0n1 unit MiB print
 Model: WD_BLACK SN770 500GB (nvme)
 Disk /dev/nvme0n1: 476940MiB
 Sector size (logical/physical): 512B/512B
