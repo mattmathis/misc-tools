@@ -12,5 +12,4 @@
     ↳ Synaptics Hi-Res Audio                  	id=10	[slave  keyboard (3)]
     ↳ SEM USB Keyboard                        	id=12	[slave  keyboard (3)]
     ↳ SEM USB Keyboard System Control         	id=14	[slave  keyboard (3)]
-    ↳ HD Pro Webcam C920                      	id=15	[slave  keyboard (3)]
-    ↳ SEM USB Keyboard Consumer Control       	id=16	[slave  keyboard (3)]
+    ↳ SEM USB Keyboard Consumer Control       	id=15	[slave  keyboard (3)]

@@ -1,51 +1,15 @@
 # udevadm info /dev/input/by-id/*
-P: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3.2/2-3.2:1.0/input/input9/event9
-N: input/event9
+P: /devices/pci0000:00/0000:00:14.0/usb3/3-2/3-2:1.0/0003:046D:C077.0002/input/input4/event4
+N: input/event4
 L: 0
-S: input/by-path/pci-0000:00:14.0-usb-0:3.2:1.0-event
-S: input/by-id/usb-046d_HD_Pro_Webcam_C920_551F923F-event-if00
-E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3.2/2-3.2:1.0/input/input9/event9
-E: DEVNAME=/dev/input/event9
-E: MAJOR=13
-E: MINOR=73
-E: SUBSYSTEM=input
-E: USEC_INITIALIZED=24452110
-E: ID_INPUT=1
-E: ID_INPUT_KEY=1
-E: ID_VENDOR=046d
-E: ID_VENDOR_ENC=046d
-E: ID_VENDOR_ID=046d
-E: ID_MODEL=HD_Pro_Webcam_C920
-E: ID_MODEL_ENC=HD\x20Pro\x20Webcam\x20C920
-E: ID_MODEL_ID=082d
-E: ID_REVISION=0011
-E: ID_SERIAL=046d_HD_Pro_Webcam_C920_551F923F
-E: ID_SERIAL_SHORT=551F923F
-E: ID_TYPE=video
-E: ID_BUS=usb
-E: ID_USB_INTERFACES=:0e0100:0e0200:010100:010200:
-E: ID_USB_INTERFACE_NUM=00
-E: ID_USB_DRIVER=uvcvideo
-E: ID_PATH=pci-0000:00:14.0-usb-0:3.2:1.0
-E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_3_2_1_0
-E: XKBLAYOUT=us
-E: BACKSPACE=guess
-E: LIBINPUT_DEVICE_GROUP=3/46d/82d:usb-0000:00:14.0-3
-E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:3.2:1.0-event /dev/input/by-id/usb-046d_HD_Pro_Webcam_C920_551F923F-event-if00
-E: TAGS=:power-switch:
-E: CURRENT_TAGS=:power-switch:
-
-P: /devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.0/0003:046D:C077.0002/input/input5/event5
-N: input/event5
-L: 0
-S: input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-mouse
 S: input/by-id/usb-Logitech_USB_Optical_Mouse-event-mouse
-E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.0/0003:046D:C077.0002/input/input5/event5
-E: DEVNAME=/dev/input/event5
+S: input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-mouse
+E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-2/3-2:1.0/0003:046D:C077.0002/input/input4/event4
+E: DEVNAME=/dev/input/event4
 E: MAJOR=13
-E: MINOR=69
+E: MINOR=68
 E: SUBSYSTEM=input
-E: USEC_INITIALIZED=23884357
+E: USEC_INITIALIZED=15803462
 E: ID_INPUT=1
 E: ID_INPUT_MOUSE=1
 E: ID_VENDOR=Logitech
@@ -64,19 +28,19 @@ E: ID_USB_DRIVER=usbhid
 E: ID_PATH=pci-0000:00:14.0-usb-0:2:1.0
 E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_2_1_0
 E: LIBINPUT_DEVICE_GROUP=3/46d/c077:usb-0000:00:14.0-2
-E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-mouse /dev/input/by-id/usb-Logitech_USB_Optical_Mouse-event-mouse
+E: DEVLINKS=/dev/input/by-id/usb-Logitech_USB_Optical_Mouse-event-mouse /dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-mouse
 
-P: /devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.0/0003:046D:C077.0002/input/input5/mouse0
+P: /devices/pci0000:00/0000:00:14.0/usb3/3-2/3-2:1.0/0003:046D:C077.0002/input/input4/mouse0
 N: input/mouse0
 L: 0
-S: input/by-path/pci-0000:00:14.0-usb-0:2:1.0-mouse
 S: input/by-id/usb-Logitech_USB_Optical_Mouse-mouse
-E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.0/0003:046D:C077.0002/input/input5/mouse0
+S: input/by-path/pci-0000:00:14.0-usb-0:2:1.0-mouse
+E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-2/3-2:1.0/0003:046D:C077.0002/input/input4/mouse0
 E: DEVNAME=/dev/input/mouse0
 E: MAJOR=13
 E: MINOR=32
 E: SUBSYSTEM=input
-E: USEC_INITIALIZED=23784156
+E: USEC_INITIALIZED=15693220
 E: ID_INPUT=1
 E: ID_INPUT_MOUSE=1
 E: ID_VENDOR=Logitech
@@ -94,19 +58,19 @@ E: ID_USB_INTERFACE_NUM=00
 E: ID_USB_DRIVER=usbhid
 E: ID_PATH=pci-0000:00:14.0-usb-0:2:1.0
 E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_2_1_0
-E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-mouse /dev/input/by-id/usb-Logitech_USB_Optical_Mouse-mouse
+E: DEVLINKS=/dev/input/by-id/usb-Logitech_USB_Optical_Mouse-mouse /dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-mouse
 
-P: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3.1/2-3.1:1.1/0003:1A2C:0E24.0005/input/input7/event7
-N: input/event7
+P: /devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1/3-3.1:1.1/0003:1A2C:0E24.0005/input/input8/event8
+N: input/event8
 L: 0
-S: input/by-path/pci-0000:00:14.0-usb-0:3.1:1.1-event
 S: input/by-id/usb-SEM_USB_Keyboard-event-if01
-E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3.1/2-3.1:1.1/0003:1A2C:0E24.0005/input/input7/event7
-E: DEVNAME=/dev/input/event7
+S: input/by-path/pci-0000:00:14.0-usb-0:3.1:1.1-event
+E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1/3-3.1:1.1/0003:1A2C:0E24.0005/input/input8/event8
+E: DEVNAME=/dev/input/event8
 E: MAJOR=13
-E: MINOR=71
+E: MINOR=72
 E: SUBSYSTEM=input
-E: USEC_INITIALIZED=23917151
+E: USEC_INITIALIZED=15891327
 E: ID_INPUT=1
 E: ID_INPUT_KEY=1
 E: ID_VENDOR=SEM
@@ -127,21 +91,21 @@ E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_3_1_1_1
 E: XKBLAYOUT=us
 E: BACKSPACE=guess
 E: LIBINPUT_DEVICE_GROUP=3/1a2c/e24:usb-0000:00:14.0-3
-E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:3.1:1.1-event /dev/input/by-id/usb-SEM_USB_Keyboard-event-if01
+E: DEVLINKS=/dev/input/by-id/usb-SEM_USB_Keyboard-event-if01 /dev/input/by-path/pci-0000:00:14.0-usb-0:3.1:1.1-event
 E: TAGS=:power-switch:
 E: CURRENT_TAGS=:power-switch:
 
-P: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3.1/2-3.1:1.0/0003:1A2C:0E24.0004/input/input6/event6
+P: /devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1/3-3.1:1.0/0003:1A2C:0E24.0004/input/input6/event6
 N: input/event6
 L: 0
 S: input/by-path/pci-0000:00:14.0-usb-0:3.1:1.0-event-kbd
 S: input/by-id/usb-SEM_USB_Keyboard-event-kbd
-E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3.1/2-3.1:1.0/0003:1A2C:0E24.0004/input/input6/event6
+E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1/3-3.1:1.0/0003:1A2C:0E24.0004/input/input6/event6
 E: DEVNAME=/dev/input/event6
 E: MAJOR=13
 E: MINOR=70
 E: SUBSYSTEM=input
-E: USEC_INITIALIZED=24041895
+E: USEC_INITIALIZED=15886284
 E: ID_INPUT=1
 E: ID_INPUT_KEY=1
 E: ID_INPUT_KEYBOARD=1
@@ -167,17 +131,17 @@ E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:3.1:1.0-event-kbd /dev/inp
 E: TAGS=:power-switch:
 E: CURRENT_TAGS=:power-switch:
 
-P: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.3/0003:0572:1B08.0001/input/input3/event3
+P: /devices/pci0000:00/0000:00:14.0/usb3/3-1/3-1:1.3/0003:0572:1B08.0001/input/input3/event3
 N: input/event3
 L: 0
-S: input/by-id/usb-Synaptics_Hi-Res_Audio_000000000000000000000000-event-if03
 S: input/by-path/pci-0000:00:14.0-usb-0:1:1.3-event
-E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.3/0003:0572:1B08.0001/input/input3/event3
+S: input/by-id/usb-Synaptics_Hi-Res_Audio_000000000000000000000000-event-if03
+E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb3/3-1/3-1:1.3/0003:0572:1B08.0001/input/input3/event3
 E: DEVNAME=/dev/input/event3
 E: MAJOR=13
 E: MINOR=67
 E: SUBSYSTEM=input
-E: USEC_INITIALIZED=23899600
+E: USEC_INITIALIZED=15799184
 E: ID_INPUT=1
 E: ID_INPUT_KEY=1
 E: ID_VENDOR=Synaptics
@@ -199,7 +163,7 @@ E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_1_1_3
 E: XKBLAYOUT=us
 E: BACKSPACE=guess
 E: LIBINPUT_DEVICE_GROUP=3/572/1b08:usb-0000:00:14.0-1
-E: DEVLINKS=/dev/input/by-id/usb-Synaptics_Hi-Res_Audio_000000000000000000000000-event-if03 /dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.3-event
+E: DEVLINKS=/dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.3-event /dev/input/by-id/usb-Synaptics_Hi-Res_Audio_000000000000000000000000-event-if03
 E: TAGS=:power-switch:
 E: CURRENT_TAGS=:power-switch:
 
