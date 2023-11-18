@@ -6,6 +6,6 @@ nvme0n1
 ├─nvme0n1p2     vfat        FAT32              6F2C-4973                                 1.5G    62% /recovery
 ├─nvme0n1p3     crypto_LUKS 2                  bab2e720-aad4-45a9-a308-7564a29672d4                  
 │ └─cryptdata   LVM2_member LVM2 001           IMxs6W-pfsE-EBoF-pXMN-9aCc-yfkB-iSnS0e                
-│   └─data-root ext4        1.0                1ac6d84f-3250-47ac-a71b-32d77a33a18d    345.7G    18% /
+│   └─data-root ext4        1.0                1ac6d84f-3250-47ac-a71b-32d77a33a18d    344.8G    18% /
 └─nvme0n1p4     swap        1                  5b6e82aa-2dfe-400c-9111-d7d783fb0903                  
-  └─cryptswap   swap        1        cryptswap 4382770c-ca41-45cb-b6ce-118c350f1d61                  [SWAP]
+  └─cryptswap   swap        1        cryptswap 49c645b0-f615-4143-a6de-a7c33599367e                  [SWAP]

@@ -27,7 +27,7 @@ lrwxrwxrwx 1 root root        30 Oct 20 06:26 vmlinuz.old -> vmlinuz-6.5.4-76060
 total 12
 drwx------ 2 root root 4096 Apr 10  2023 3137346862af8a2bd39cc42c64341733
 drwx------ 7 root root 4096 Apr 10  2023 EFI
-drwx------ 3 root root 4096 Oct 20 07:04 loader
+drwx------ 3 root root 4096 Nov 15 13:12 loader
 
 /boot/efi/3137346862af8a2bd39cc42c64341733:
 total 0
@@ -68,7 +68,7 @@ total 100
 total 12
 drwx------ 2 root root 4096 Aug  7 23:26 entries
 -rwx------ 1 root root   23 Apr 10  2023 loader.conf
--rwx------ 1 root root  512 Oct 20 07:04 random-seed
+-rwx------ 1 root root  512 Nov 15 13:12 random-seed
 
 /boot/efi/loader/entries:
 total 12
