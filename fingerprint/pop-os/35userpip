@@ -121,7 +121,7 @@ simplegeneric                 0.8.1
 six                           1.12.0
 sortedcontainers              2.4.0
 soupsieve                     2.4.1
-system76driver                20.4.82
+system76driver                20.4.85
 systemd-python                234
 tenacity                      8.2.2
 terminado                     0.13.3

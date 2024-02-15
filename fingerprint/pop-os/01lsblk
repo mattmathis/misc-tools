@@ -1,11 +1,14 @@
 # sudo lsblk -f
-NAME            FSTYPE      FSVER    LABEL     UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
-zram0                                                                                                [SWAP]
-nvme0n1                                                                                              
-├─nvme0n1p1     vfat        FAT32              6F2C-4C22                               615.5M    40% /boot/efi
-├─nvme0n1p2     vfat        FAT32              6F2C-4973                                 1.5G    62% /recovery
-├─nvme0n1p3     crypto_LUKS 2                  bab2e720-aad4-45a9-a308-7564a29672d4                  
-│ └─cryptdata   LVM2_member LVM2 001           IMxs6W-pfsE-EBoF-pXMN-9aCc-yfkB-iSnS0e                
-│   └─data-root ext4        1.0                1ac6d84f-3250-47ac-a71b-32d77a33a18d    344.8G    18% /
-└─nvme0n1p4     swap        1                  5b6e82aa-2dfe-400c-9111-d7d783fb0903                  
-  └─cryptswap   swap        1        cryptswap 49c645b0-f615-4143-a6de-a7c33599367e                  [SWAP]
+NAME            FSTYPE      FSVER    LABEL                  UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda                                                                                                               
+├─sda1                                                                                                            
+└─sda2          ntfs                 Seagate Portable Drive 7AC0DFDE004465DA                          3.6T     0% /media/mattmathis/Seagate Portable Drive
+zram0                                                                                                             [SWAP]
+nvme0n1                                                                                                           
+├─nvme0n1p1     vfat        FAT32                           6F2C-4C22                                 626M    39% /boot/efi
+├─nvme0n1p2     vfat        FAT32                           6F2C-4973                                 1.1G    72% /recovery
+├─nvme0n1p3     crypto_LUKS 2                               bab2e720-aad4-45a9-a308-7564a29672d4                  
+│ └─cryptdata   LVM2_member LVM2 001                        IMxs6W-pfsE-EBoF-pXMN-9aCc-yfkB-iSnS0e                
+│   └─data-root ext4        1.0                             1ac6d84f-3250-47ac-a71b-32d77a33a18d    334.7G    20% /
+└─nvme0n1p4     swap        1                               5b6e82aa-2dfe-400c-9111-d7d783fb0903                  
+  └─cryptswap   swap        1        cryptswap              3a1e1fbc-9c38-431a-8d5a-7aae3a914391                  [SWAP]

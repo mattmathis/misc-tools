@@ -1,7 +1,7 @@
 # xinput
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
 ⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
-⎜   ↳ Logitech USB Optical Mouse              	id=11	[slave  pointer  (2)]
+⎜   ↳ USB OPTICAL MOUSE                       	id=11	[slave  pointer  (2)]
 ⎜   ↳ SEM USB Keyboard Consumer Control       	id=13	[slave  pointer  (2)]
 ⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
     ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
