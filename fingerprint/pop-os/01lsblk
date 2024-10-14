@@ -2,13 +2,13 @@
 NAME            FSTYPE      FSVER    LABEL                  UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
 sda                                                                                                               
 ├─sda1                                                                                                            
-└─sda2          ntfs                 Seagate Portable Drive 7AC0DFDE004465DA                          3.6T     1% /media/mattmathis/Seagate Portable Drive
+└─sda2          ntfs                 Seagate Portable Drive 36E07A93E07A58D7                          3.5T     4% /media/mattmathis/Seagate Portable Drive
 zram0                                                                                                             [SWAP]
 nvme0n1                                                                                                           
-├─nvme0n1p1     vfat        FAT32                           6F2C-4C22                               665.2M    35% /boot/efi
-├─nvme0n1p2     vfat        FAT32                           6F2C-4973                                 1.1G    72% /recovery
+├─nvme0n1p1     vfat        FAT32                           6F2C-4C22                                 741M    27% /boot/efi
+├─nvme0n1p2     vfat        FAT32                           6F2C-4973                                 1.6G    61% /recovery
 ├─nvme0n1p3     crypto_LUKS 2                               bab2e720-aad4-45a9-a308-7564a29672d4                  
 │ └─cryptdata   LVM2_member LVM2 001                        IMxs6W-pfsE-EBoF-pXMN-9aCc-yfkB-iSnS0e                
-│   └─data-root ext4        1.0                             1ac6d84f-3250-47ac-a71b-32d77a33a18d    325.9G    22% /
+│   └─data-root ext4        1.0                             1ac6d84f-3250-47ac-a71b-32d77a33a18d    290.5G    30% /
 └─nvme0n1p4     swap        1                               5b6e82aa-2dfe-400c-9111-d7d783fb0903                  
-  └─cryptswap   swap        1        cryptswap              9f1c9741-88c9-4b50-886a-f49fff7246bb                  [SWAP]
+  └─cryptswap   swap        1        cryptswap              89b45972-51d9-4d9d-a41b-278fb10dec65                  [SWAP]
