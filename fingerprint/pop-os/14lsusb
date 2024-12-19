@@ -1,8 +1,8 @@
 # sudo lsusb
 Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 003 Device 008: ID 1050:0200 Yubico.com Gnubby U2F
-Bus 003 Device 017: ID 0bc2:2343 Seagate RSS LLC Portable
-Bus 003 Device 016: ID 046d:0a56 Logitech, Inc. Logitech H570e Stereo
+Bus 003 Device 009: ID 328f:1930 eMeet eMeet Audio Adapter A200
+Bus 003 Device 007: ID 046d:0a56 Logitech, Inc. Logitech H570e Stereo
 Bus 003 Device 006: ID 1a2c:506f China Resource Semico Co., Ltd USB Keyboard
 Bus 003 Device 004: ID 0bda:5411 Realtek Semiconductor Corp. RTS5411 Hub
 Bus 003 Device 003: ID 30fa:0300  USB OPTICAL MOUSE 

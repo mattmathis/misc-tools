@@ -1,6 +1,6 @@
 # lslogins
   UID USER                PROC PWD-LOCK PWD-DENY  LAST-LOGIN GECOS
-    0 root                 172                               root
+    0 root                 167                               root
     1 daemon                 1                               daemon
     2 bin                    0                               bin
     3 sys                    0                               sys
@@ -23,7 +23,7 @@
   103 systemd-timesync       0                               systemd Time Synchronization,,,
   104 syslog                 1                               
   105 _apt                   0                               
-  106 geoclue                1                               
+  106 geoclue                0                               
   107 colord                 1                               colord colour management daemon,,,
   108 gnome-initial-setup    0                               
   109 speech-dispatcher      0                               Speech Dispatcher,,,
@@ -45,5 +45,5 @@
   125 dnsmasq                0                               dnsmasq,,,
   126 postfix                0                               
   127 smokeping              1                               SmokePing daemon,,,
- 1000 mattmathis           164                   Oct06/20:40 Matt Mathis
+ 1000 mattmathis           169                   Dec16/16:53 Matt Mathis
 65534 nobody                 0                               nobody

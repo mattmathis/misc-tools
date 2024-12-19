@@ -61,7 +61,7 @@ SecretStorage         3.3.1
 sessioninstaller      0.0.0
 setuptools            59.6.0
 six                   1.16.0
-system76driver        20.4.96
+system76driver        20.4.106
 systemd-python        234
 ubuntu-drivers-common 0.0.0
 ubuntu-pro-client     8001

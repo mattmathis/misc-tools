@@ -89,7 +89,7 @@ pop-os
           version: 6.140.1
           serial: To Be Filled By O.E.M.
           slot: U3E1
-          size: 4012MHz
+          size: 4064MHz
           capacity: 4100MHz
           width: 64 bits
           clock: 100MHz
@@ -116,7 +116,7 @@ pop-os
              clock: 33MHz
              capabilities: pciexpress msi pm vga_controller bus_master cap_list rom fb
              configuration: depth=32 driver=i915 latency=0 mode=2560x1440 resolution=2560,1440 visual=truecolor xres=2560 yres=1440
-             resources: iomemory:600-5ff iomemory:400-3ff irq:181 memory:603c000000-603cffffff memory:4000000000-400fffffff ioport:3000(size=64) memory:c0000-dffff memory:4010000000-4016ffffff memory:4020000000-40ffffffff
+             resources: iomemory:600-5ff iomemory:400-3ff irq:160 memory:603c000000-603cffffff memory:4000000000-400fffffff ioport:3000(size=64) memory:c0000-dffff memory:4010000000-4016ffffff memory:4020000000-40ffffffff
         *-pci:0
              description: PCI bridge
              product: 11th Gen Core Processor PCIe Controller
@@ -255,7 +255,7 @@ pop-os
              clock: 33MHz
              capabilities: pm msi xhci bus_master cap_list
              configuration: driver=xhci_hcd latency=0
-             resources: iomemory:600-5ff irq:128 memory:603d190000-603d19ffff
+             resources: iomemory:600-5ff irq:144 memory:603d190000-603d19ffff
            *-usbhost:0
                 product: xHCI Host Controller
                 vendor: Linux 6.9.3-76060903-generic xhci-hcd
@@ -309,7 +309,7 @@ pop-os
              clock: 33MHz
              capabilities: pm msi xhci bus_master cap_list
              configuration: driver=xhci_hcd latency=0
-             resources: iomemory:600-5ff irq:151 memory:603d180000-603d18ffff
+             resources: iomemory:600-5ff irq:150 memory:603d180000-603d18ffff
            *-usbhost:0
                 product: xHCI Host Controller
                 vendor: Linux 6.9.3-76060903-generic xhci-hcd
@@ -380,61 +380,37 @@ pop-os
                       logical name: /dev/snd/controlC2
                       logical name: /dev/snd/pcmC2D0c
                       logical name: /dev/snd/pcmC2D0p
-                      logical name: input20
+                      logical name: input8
                       logical name: /dev/input/event8
-                      logical name: input21
+                      logical name: input9
                       logical name: /dev/input/event9
-                      logical name: input21::mute
+                      logical name: input9::mute
                       version: 7.11
                       serial: 00000000
                       capabilities: usb-2.00 audio-control usb
                       configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
                  *-usb:2
-                      description: Mass storage device
-                      product: Portable
-                      vendor: Seagate
+                      description: Audio device
+                      product: eMeet eMeet Audio Adapter A200 Keyboard
+                      vendor: eMeet
                       physical id: 3
                       bus info: usb@3:7.3
-                      logical name: scsi1
-                      version: 0.00
-                      serial: NACMNSDN
-                      capabilities: usb-2.10 scsi
-                      configuration: driver=uas maxpower=100mA speed=480Mbit/s
-                    *-disk
-                         description: SCSI Disk
-                         product: Portable
-                         vendor: Seagate
-                         physical id: 0.0.0
-                         bus info: scsi@1:0.0.0
-                         logical name: /dev/sda
-                         version: 9300
-                         serial: NACMNSDN
-                         size: 3726GiB (4TB)
-                         capabilities: gpt-1.00 partitioned partitioned:gpt
-                         configuration: ansiversion=6 guid=56b37710-dc11-4705-8c07-53899e3a189a logicalsectorsize=512 sectorsize=4096
-                       *-volume:0
-                            description: reserved partition
-                            vendor: Windows
-                            physical id: 1
-                            bus info: scsi@1:0.0.0,1
-                            logical name: /dev/sda1
-                            serial: ec48768b-456c-4a7a-ba0e-f9aded88070e
-                            capacity: 127MiB
-                            capabilities: nofs
-                            configuration: name=Microsoft reserved partition
-                       *-volume:1
-                            description: Windows NTFS volume
-                            vendor: Windows
-                            physical id: 2
-                            bus info: scsi@1:0.0.0,2
-                            logical name: /dev/sda2
-                            logical name: /media/mattmathis/Seagate Portable Drive
-                            version: 3.1
-                            serial: e07a-58d7
-                            size: 1677GiB
-                            capacity: 3725GiB
-                            capabilities: ntfs initialized
-                            configuration: clustersize=4096 created=2022-09-16 00:17:53 filesystem=ntfs label=Seagate Portable Drive mount.fstype=ntfs3 mount.options=rw,nosuid,nodev,relatime,uid=1000,gid=1000,windows_names,iocharset=utf8 name=Basic data partition state=mounted
+                      logical name: card3
+                      logical name: /dev/snd/controlC3
+                      logical name: /dev/snd/pcmC3D0c
+                      logical name: /dev/snd/pcmC3D0p
+                      logical name: input14
+                      logical name: /dev/input/event14
+                      logical name: input15
+                      logical name: /dev/input/event15
+                      logical name: input15::capslock
+                      logical name: input15::compose
+                      logical name: input15::kana
+                      logical name: input15::numlock
+                      logical name: input15::scrolllock
+                      version: 2.41
+                      capabilities: usb-1.10 audio-control usb
+                      configuration: driver=usbhid maxpower=300mA speed=12Mbit/s
                  *-usb:3
                       description: Human interface device
                       product: Yubico Gnubby (gnubby1)
