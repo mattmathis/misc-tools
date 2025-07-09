@@ -2,10 +2,10 @@
 NAME            FSTYPE      FSVER    LABEL     UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
 zram0                                                                                                [SWAP]
 nvme0n1                                                                                              
-├─nvme0n1p1     vfat        FAT32              6F2C-4C22                                 740M    27% /boot/efi
-├─nvme0n1p2     vfat        FAT32              6F2C-4973                                 1.1G    72% /recovery
+├─nvme0n1p1     vfat        FAT32              6F2C-4C22                               730.4M    28% /boot/efi
+├─nvme0n1p2     vfat        FAT32              6F2C-4973                                 1.5G    62% /recovery
 ├─nvme0n1p3     crypto_LUKS 2                  bab2e720-aad4-45a9-a308-7564a29672d4                  
 │ └─cryptdata   LVM2_member LVM2 001           IMxs6W-pfsE-EBoF-pXMN-9aCc-yfkB-iSnS0e                
-│   └─data-root ext4        1.0                1ac6d84f-3250-47ac-a71b-32d77a33a18d    284.4G    31% /
+│   └─data-root ext4        1.0                1ac6d84f-3250-47ac-a71b-32d77a33a18d    271.7G    34% /
 └─nvme0n1p4     swap        1                  5b6e82aa-2dfe-400c-9111-d7d783fb0903                  
-  └─cryptswap   swap        1        cryptswap 31ff5781-bb9b-4d2d-b832-427a1a80f1e6                  [SWAP]
+  └─cryptswap   swap        1        cryptswap 58bd7ec6-0062-47e6-a0e4-4d62d41e207a                  [SWAP]

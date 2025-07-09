@@ -1,45 +1,49 @@
 # sudo ls -Rl /boot
 /boot:
-total 918972
+total 1033104
+-rw-r--r-- 1 root root    292204 Mar 27 14:02 config-6.12.10-76061203-generic
 -rw-r--r-- 1 root root    278268 Sep 21  2023 config-6.4.6-76060406-generic
 -rw-r--r-- 1 root root    278753 Sep 29  2023 config-6.5.4-76060504-generic
 -rw-r--r-- 1 root root    280474 Oct 15  2023 config-6.5.6-76060506-generic
 -rw-r--r-- 1 root root    282275 Feb 27  2024 config-6.6.10-76060610-generic
 -rw-r--r-- 1 root root    282337 Dec 11  2023 config-6.6.6-76060606-generic
 -rw-r--r-- 1 root root    286106 May  8  2024 config-6.8.0-76060800daily20240311-generic
--rw-r--r-- 1 root root    287865 Nov 20 14:29 config-6.9.3-76060903-generic
+-rw-r--r-- 1 root root    287865 Feb  5 07:56 config-6.9.3-76060903-generic
 drwx------ 5 root root      4096 Dec 31  1969 efi
-lrwxrwxrwx 1 root root        33 Jun 27 19:47 initrd.img -> initrd.img-6.9.3-76060903-generic
+lrwxrwxrwx 1 root root        35 Mar 12 12:21 initrd.img -> initrd.img-6.12.10-76061203-generic
+-rw-r--r-- 1 root root  89849028 May  4 06:10 initrd.img-6.12.10-76061203-generic
 -rw-r--r-- 1 root root 121417122 Sep 28  2023 initrd.img-6.4.6-76060406-generic
 -rw-r--r-- 1 root root 122670856 Oct 12  2023 initrd.img-6.5.4-76060504-generic
 -rw-r--r-- 1 root root 122675173 Dec 13  2023 initrd.img-6.5.6-76060506-generic
 -rw-r--r-- 1 root root 124456068 Mar 17  2024 initrd.img-6.6.10-76060610-generic
 -rw-r--r-- 1 root root 123673451 Jan 15  2024 initrd.img-6.6.6-76060606-generic
--rw-r--r-- 1 root root  82123152 Jun 27 19:48 initrd.img-6.8.0-76060800daily20240311-generic
--rw-r--r-- 1 root root  82496844 Dec 16 16:30 initrd.img-6.9.3-76060903-generic
-lrwxrwxrwx 1 root root        46 Jun 27 19:47 initrd.img.old -> initrd.img-6.8.0-76060800daily20240311-generic
+-rw-r--r-- 1 root root  82123152 Jun 27  2024 initrd.img-6.8.0-76060800daily20240311-generic
+-rw-r--r-- 1 root root  84047940 Mar 10 12:41 initrd.img-6.9.3-76060903-generic
+lrwxrwxrwx 1 root root        33 Mar 12 12:21 initrd.img.old -> initrd.img-6.9.3-76060903-generic
+-rw------- 1 root root   9595845 Mar 27 14:02 System.map-6.12.10-76061203-generic
 -rw------- 1 root root   8112318 Sep 21  2023 System.map-6.4.6-76060406-generic
 -rw------- 1 root root   8249936 Sep 29  2023 System.map-6.5.4-76060504-generic
 -rw------- 1 root root   8254082 Oct 15  2023 System.map-6.5.6-76060506-generic
 -rw------- 1 root root   8305985 Feb 27  2024 System.map-6.6.10-76060610-generic
 -rw------- 1 root root   8304437 Dec 11  2023 System.map-6.6.6-76060606-generic
 -rw------- 1 root root   8609711 May  8  2024 System.map-6.8.0-76060800daily20240311-generic
--rw------- 1 root root   8713596 Nov 20 14:29 System.map-6.9.3-76060903-generic
-lrwxrwxrwx 1 root root        30 Jun 27 19:47 vmlinuz -> vmlinuz-6.9.3-76060903-generic
+-rw------- 1 root root   8713596 Feb  5 07:56 System.map-6.9.3-76060903-generic
+lrwxrwxrwx 1 root root        32 Mar 12 12:21 vmlinuz -> vmlinuz-6.12.10-76061203-generic
+-rw------- 1 root root  15565312 Mar 27 14:02 vmlinuz-6.12.10-76061203-generic
 -rw------- 1 root root  14015488 Sep 21  2023 vmlinuz-6.4.6-76060406-generic
 -rw------- 1 root root  14189568 Sep 29  2023 vmlinuz-6.5.4-76060504-generic
 -rw------- 1 root root  14194752 Oct 15  2023 vmlinuz-6.5.6-76060506-generic
 -rw------- 1 root root  14330080 Feb 27  2024 vmlinuz-6.6.10-76060610-generic
 -rw------- 1 root root  14327104 Dec 11  2023 vmlinuz-6.6.6-76060606-generic
 -rw------- 1 root root  14819840 May  8  2024 vmlinuz-6.8.0-76060800daily20240311-generic
--rw------- 1 root root  15053312 Nov 20 14:29 vmlinuz-6.9.3-76060903-generic
-lrwxrwxrwx 1 root root        43 Jun 27 19:47 vmlinuz.old -> vmlinuz-6.8.0-76060800daily20240311-generic
+-rw------- 1 root root  15053312 Feb  5 07:56 vmlinuz-6.9.3-76060903-generic
+lrwxrwxrwx 1 root root        30 Mar 12 12:21 vmlinuz.old -> vmlinuz-6.9.3-76060903-generic
 
 /boot/efi:
 total 12
 drwx------ 2 root root 4096 Apr 10  2023 3137346862af8a2bd39cc42c64341733
 drwx------ 7 root root 4096 Apr 10  2023 EFI
-drwx------ 3 root root 4096 Dec 16 16:51 loader
+drwx------ 3 root root 4096 May  4 06:17 loader
 
 /boot/efi/3137346862af8a2bd39cc42c64341733:
 total 0
@@ -60,17 +64,17 @@ total 100
 total 0
 
 /boot/efi/EFI/Pop_OS-1ac6d84f-3250-47ac-a71b-32d77a33a18d:
-total 189948
--rwx------ 1 root root      167 Dec 16 16:30 cmdline
--rwx------ 1 root root 82496844 Dec 16 16:30 initrd.img
--rwx------ 1 root root 82123152 Dec 16 16:30 initrd.img-previous
--rwx------ 1 root root 15053312 Dec 16 16:30 vmlinuz.efi
--rwx------ 1 root root 14819840 Dec 16 16:30 vmlinuz-previous.efi
+total 199736
+-rwx------ 1 root root      167 May  4 06:10 cmdline
+-rwx------ 1 root root 89849028 May  4 06:10 initrd.img
+-rwx------ 1 root root 84047940 May  4 06:10 initrd.img-previous
+-rwx------ 1 root root 15565312 May  4 06:10 vmlinuz.efi
+-rwx------ 1 root root 15053312 May  4 06:10 vmlinuz-previous.efi
 
 /boot/efi/EFI/Recovery-6F2C-4973:
-total 96536
--rwx------ 1 root root 83795128 Dec  3 16:43 initrd.gz
--rwx------ 1 root root 15053312 Dec  3 16:43 vmlinuz.efi
+total 96560
+-rwx------ 1 root root 83817744 Dec 19 12:03 initrd.gz
+-rwx------ 1 root root 15053312 Dec 19 12:03 vmlinuz.efi
 
 /boot/efi/EFI/systemd:
 total 100
@@ -80,10 +84,10 @@ total 100
 total 12
 drwx------ 2 root root 4096 Aug  7  2023 entries
 -rwx------ 1 root root   23 Apr 10  2023 loader.conf
--rwx------ 1 root root  512 Dec 16 16:51 random-seed
+-rwx------ 1 root root  512 May  4 06:17 random-seed
 
 /boot/efi/loader/entries:
 total 12
--rwx------ 1 root root 256 Dec 16 16:30 Pop_OS-current.conf
--rwx------ 1 root root 274 Dec 16 16:30 Pop_OS-oldkern.conf
+-rwx------ 1 root root 256 May  4 06:10 Pop_OS-current.conf
+-rwx------ 1 root root 274 May  4 06:10 Pop_OS-oldkern.conf
 -rwx------ 1 root root 299 Apr 10  2023 Recovery-6F2C-4973.conf
