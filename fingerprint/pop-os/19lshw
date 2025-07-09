@@ -89,12 +89,12 @@ pop-os
           version: 6.140.1
           serial: To Be Filled By O.E.M.
           slot: U3E1
-          size: 4099MHz
+          size: 2832MHz
           capacity: 4100MHz
           width: 64 bits
           clock: 100MHz
           capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect md_clear ibt flush_l1d arch_capabilities cpufreq
-          configuration: cores=2 enabledcores=2 microcode=184 threads=4
+          configuration: cores=2 enabledcores=2 microcode=188 threads=4
      *-pci
           description: Host bridge
           product: Intel Corporation
@@ -390,6 +390,52 @@ pop-os
                       capabilities: usb-2.00 audio-control usb
                       configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
                  *-usb:2
+                      description: Mass storage device
+                      product: Portable
+                      vendor: Seagate
+                      physical id: 3
+                      bus info: usb@3:7.3
+                      logical name: scsi1
+                      version: 7.12
+                      serial: NB17GEHM
+                      capabilities: usb-2.10 scsi
+                      configuration: driver=uas maxpower=500mA speed=480Mbit/s
+                    *-disk
+                         description: SCSI Disk
+                         product: Portable
+                         vendor: Seagate
+                         physical id: 0.0.0
+                         bus info: scsi@1:0.0.0
+                         logical name: /dev/sda
+                         version: 0712
+                         serial: NB17GEHM
+                         size: 3726GiB (4TB)
+                         capabilities: gpt-1.00 partitioned partitioned:gpt
+                         configuration: ansiversion=6 guid=01000000-0000-0000-4e42-31374745484d logicalsectorsize=512 sectorsize=4096
+                       *-volume:0
+                            description: reserved partition
+                            vendor: Windows
+                            physical id: 1
+                            bus info: scsi@1:0.0.0,1
+                            logical name: /dev/sda1
+                            serial: 0b6c7210-f95a-4da1-965f-d7300fde63f9
+                            capacity: 15MiB
+                            capabilities: nofs
+                            configuration: name=Microsoft reserved partition
+                       *-volume:1
+                            description: Windows NTFS volume
+                            vendor: Windows
+                            physical id: 2
+                            bus info: scsi@1:0.0.0,2
+                            logical name: /dev/sda2
+                            logical name: /media/mattmathis/Seagate Portable Drive
+                            version: 3.1
+                            serial: 0044-65da
+                            size: 1677GiB
+                            capacity: 3726GiB
+                            capabilities: ntfs initialized
+                            configuration: clustersize=4096 created=2023-06-29 23:55:35 filesystem=ntfs label=Seagate Portable Drive mount.fstype=ntfs3 mount.options=rw,nosuid,nodev,relatime,uid=1000,gid=1000,windows_names,iocharset=utf8 name=Basic data partition state=mounted
+                 *-usb:3
                       description: Human interface device
                       product: Yubico Gnubby (gnubby1)
                       vendor: Yubico
