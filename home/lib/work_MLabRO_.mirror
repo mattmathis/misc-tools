@@ -8,7 +8,7 @@ etl-schema
 "
 
 if [ "x$1" = "xall" ] ; then
-  list="$list "`awk -e '/EOF/{ ok = 0 };{if (ok) {print $2}};/<<-EOF/{ ok= 1}' dev-tracker/gen_readme.sh`
+  list="$list "`awk '/EOF/{ ok = 0 };{if (ok) {print $2}};/<<-EOF/{ ok= 1}' dev-tracker/gen_readme.sh`
 fi
 
 prefix="git@github.com:m-lab"

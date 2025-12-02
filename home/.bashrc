@@ -3,7 +3,7 @@
 # for examples
 
 # MM leave some crumbs
-export RC_HIST="$RC_HIST:.bashrc_20230423"
+export RC_HIST="$RC_HIST:.bashrc_20251202"
 
 # MM Save $PATH for later
 if [ ! "$LOGINPATH" ]; then
@@ -80,9 +80,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
