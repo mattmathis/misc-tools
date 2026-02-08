@@ -3,7 +3,7 @@
 # for examples
 
 # MM leave some crumbs
-export RC_HIST="$RC_HIST:.bashrc_20251202"
+export RC_HIST="$RC_HIST:.bashrc_20260208"
 
 # MM Save $PATH for later
 if [ ! "$LOGINPATH" ]; then
@@ -39,9 +39,9 @@ shopt -s checkwinsize
 set -P
 function cd {
     if [ "$1" ]; then
-        builtin cd "$*"
+        builtin cd "$*" > /dev/null
     else
-        builtin cd $HOME/work
+        builtin cd $HOME/work > /dev/null
     fi
 }
 export CDPATH=.:~:~/.shortcuts:~/Projects
@@ -127,6 +127,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+alias more=less
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -138,3 +139,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '~/google-cloud-sdk/completion.bash.inc'; fi
